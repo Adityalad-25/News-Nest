@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <!--============ bootsrap cdn ==============-->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!--============ bootsrap cdn =============== -->
+
+    <title>News Nest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+ <!--===================== navabar =========== -->
+
+ <nav
+      class="navbar navbar-expand-lg fixed-top navbar bg-dark"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a href="#" onclick="reload()" class="company-logo">
+          <img src="./assets/logo.png" alt="company logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav gap-5  me-auto mb-2 mb-lg-0">
+            <button class="btn btn-" type="submit">
+              <li class="nav-item" id="ipl" onclick="onNavItemClick('ipl')">
+                <a class="nav-link active" aria-current="page" href="#">IPL</a>
+              </li>
+            </button>
+            <button class="btn btn- " type="submit">
+              <li
+                class="nav-item"
+                id="ipl"
+                onclick="onNavItemClick('politics')"
+              >
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Politics</a
+                >
+              </li>
+            </button>
+            <button class="btn btn-" type="submit">
+              <li class="nav-item" id="ipl" onclick="onNavItemClick('finance')">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Finance</a
+                >
+              </li>
+            </button>
+            <button class="btn btn- " type="submit">
+              <li class="nav-item" id="ipl" onclick="onNavItemClick('Ai')">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Artificial Intelligence</a
+                >
+              </li>
+            </button>
+            <button class="btn btn- " type="submit">
+              <li
+                class="nav-item"
+                id="ipl"
+                onclick="onNavItemClick('headlines')"
+              >
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Top Headlines</a
+                >
+              </li>
+            </button>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              id="search-text"
+              type="text"
+              class="news-input"
+              placeholder="e.g. Science"
+            />
+            <button
+              id="search-button"
+              class="btn btn-primary search-button"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+ <!--===================== navabar =========== -->
+   
+<!--============ main body for news cards ============== -->
+   <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+<!--============ main body for news cards ============== -->
+
+
+<!--============ template for news cards ============== -->
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="news-image"
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            saepe quis voluptatum quisquam vitae doloremque facilis molestias
+            quae ratione cumque!
+          </p>
+        </div>
+      </div>
+    </template>
+
+
+<!--============ template for news cards ============== -->
+  
+
+    <script src="script.js"></script>
+
+
+    <!--============ bootstrap cdn ==============-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--============ bootstrap cdn =============== -->
+  </body>
+</html>
